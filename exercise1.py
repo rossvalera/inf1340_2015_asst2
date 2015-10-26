@@ -14,28 +14,31 @@ __license__ = "MIT License"
 # Describe your function
 
 
-def pig_latinify(word):
+def pig_latinify():
 
     word = raw_input("Enter word:")
     original = word.lower() or word.upper() or word.lower[1:]
     pig = "yay"
-    first_letter = word[0]
-    vowels = list("a,e,i,o,u,y")
+    first_letter = original[0]
+    vowels = list("a,e,i,o,u, y")
+    consonants = list("b,c,d,f,g,h,j,k,l,m,n,p,q,r,s,t,v,w,x,z")
+    pig_latin_consonant = original[1: len(original)] + first_letter + pig[1:]
+    pig_latin_vowel = original + pig
 
-    if len(word) > 0 and word.isalpha():
-        print (word)
-    else:
-        print("Try again")
-
-    pig_latin_consonant = word[1 : len(original)] + first_letter + pig[1:]
-    pig_latin_vowel = word + pig
-
-    if first_letter in word[0] == vowels:
-        print(pig_latin_vowel)
+    if len(original) > 0 and original.isalpha():
+        print(original)
     else:
         print("try again")
 
+    if first_letter in original[0] == vowels:
+        print(pig_latin_vowel)
+    elif first_letter in original[0] == consonants:
+        print(pig_latin_consonant)
 
+pig_latinify()
+
+
+# print (word)
 
 
     # :param :
