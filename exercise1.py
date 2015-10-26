@@ -17,19 +17,23 @@ __license__ = "MIT License"
 def pig_latinify(word):
 
     word = raw_input("Enter word:")
+    original = word.lower() or word.upper() or word.lower[1:]
+    pig = "yay"
+    first_letter = word[0]
+    vowels = list("a,e,i,o,u")
 
-if len(word) > 0 and word.isalpha():
-    print word
-word = original.lower() or original.upper() or original.lower[1:]
-pig = "yay"
-first_letter = word[0]
-vowels = list("aeiou")
+    if len(word) > 0 and word.isalpha():
+        print (word)
+    else:
+        print("Try again")
 
-pig_latin_word = word[1 : len(original)] + first_letter + pig
-if first_letter in word[0] == vowels:
-    pig_latin_word = word + pig[1:]
+    pig_latin_consonant = word[1 : len(original)] + first_letter + pig
+    pig_latin_vowel = word + pig[1:]
 
-else: print "try again"
+    if first_letter in word[0] == vowels:
+        print(pig_latin_vowel)
+    else:
+        print("try again")
 
 
 
