@@ -20,19 +20,18 @@ def pig_latinify():
     original = word.lower() or word.upper() or word.lower[1:]
     pig = "yay"
     first_letter = original[0]
-    consonants = list("b,c,d,f,g,h,j,k,l,m,n,p,q,r,s,t,v,w,x,z")
     pig_latin_consonant = original[1:len(original)] + first_letter + pig[1:]
     pig_latin_vowel = original + pig
 
     if len(original) > 0 and original.isalpha():
-        print(original)
+        if first_letter in ["a","e","i","o","u","y"]:
+            print(pig_latin_vowel)
+        else:
+            print(pig_latin_consonant)
     else:
         print("try again")
 
-    if first_letter == "a" or "e" or "i" or "o" or "u" or "y":
-        print(pig_latin_vowel)
-    else:
-        print(pig_latin_consonant)
+
 
 pig_latinify()
 
