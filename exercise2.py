@@ -30,7 +30,7 @@ Describe your function
 :raises:
 
 """
-    #return -1
+#return -1
 
 
 def multi_find(input_string, substring, start, end):
