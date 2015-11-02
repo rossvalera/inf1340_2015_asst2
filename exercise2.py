@@ -15,12 +15,22 @@ __license__ = "MIT License"
 #def find(input_string, substring, start, end):
 
 #range function?
-def main():
+def find(input_string, substring, start, end):
     # Get the DNA substring
     print('This program searches for a DNA substring within a DNA string')
-    sequence = raw_input('Please enter a DNA substring: ')
+    input_string = raw_input('Please enter a DNA string: ')
+    substring = raw_input('Please enter a DNA substring: ')
 
-main()
+# substring = DNA sequence that we want to locate
+# input_string = complete DNA sequence that is searched.
+# how is the vey lengthy input_string input?
+
+    for substring in input_string:
+        start = substring[0]
+        end = (len(substring))
+
+find()
+
 
 """
 Describe your function
@@ -30,7 +40,7 @@ Describe your function
 :raises:
 
 """
-#return -1
+    #return -1
 
 
 def multi_find(input_string, substring, start, end):
