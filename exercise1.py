@@ -14,9 +14,8 @@ __license__ = "MIT License"
 # Describe your function
 
 
-def pig_latinify():
+def pig_latinify(word):
 
-    word = raw_input("Enter word:")
     original = word.lower() or word.upper() or word.lower[1:]
     pig = "yay"
     first_letter = original[0]
