@@ -15,6 +15,14 @@ __license__ = "MIT License"
 
 def union(table1, table2):
 
+    if list in table1[1:] in table2[1:]:
+        return table1
+    elif:
+        table1.append(table2)
+    else:
+
+
+    return []
 
     """
     Perform the union set operation on tables, table1 and table2.
@@ -25,14 +33,13 @@ def union(table1, table2):
     :raises: MismatchedAttributesException:
         if tables t1 and t2 don't have the same attributes
     """
-    return []
-
 
 def intersection(table1, table2):
     """
     Describe your function
 
     """
+
     return []
 
 

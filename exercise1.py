@@ -19,7 +19,7 @@ def pig_latinify(word):
     original = word.lower() or word.upper() or word.lower[1:]
     pig = "yay"
 # For this assignment we will consider y a vowel always
-    vowel = ["a","e","i","o","u","y"]
+    vowel = ["a","e","i","o","u"]
     index = 0
     found_letter = -1
 # Make sure that all inputs are actual letters and not numbers
@@ -32,13 +32,13 @@ def pig_latinify(word):
 
         if found_letter == -1:
             no_vowel = original + pig[1:]
-            print no_vowel
+            return no_vowel
         elif found_letter == 0:
             first_vowel = original + pig
-            print first_vowel
+            return first_vowel
         else:
             first_consonant = original[found_letter:] + original[0:found_letter] + pig[1:]
-            print first_consonant
+            return first_consonant
 
     else:
         print("try again")
