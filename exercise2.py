@@ -30,27 +30,27 @@ def find(input_string, substring, start, end):
 print(find("This is an ex-parrot", "parrot", 0, 20))
 
 
-"""
-Describe your function
-
-:param :
-:return:
-:raises:
-
-"""
-    #return -1
-
 
 def multi_find(input_string, substring, start, end):
-    """
-    Describe your function
 
-    :param :
-    :return:
-    :raises:
+    new_string = ""
+    new_index = 0
+    index = find(input_string,substring,start,end)
 
-    """
-    result = ""
+    if index == -1:
+        return -1
 
-    return result
+    else:
+        new_string += (', ' + str(index))
+        string_function = input_string[index+len(substring):]
+        while len(string_function) > len(substring):
+            index = find(string_function, substring, start,end)
+            if index == -1:
+                return new_string[2:]
+            else:
+                new_index += index + len(substring)
+                string_function = string_function[index+len(substring):]
+                new_string += ', ' + str(new_index)
+        return new_string[2:]
 
+print(multi_find("Ni! Ni! Ni! Ni!", "Ni", 0, 20))

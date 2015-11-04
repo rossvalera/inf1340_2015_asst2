@@ -15,13 +15,14 @@ __license__ = "MIT License"
 
 
 def pig_latinify(word):
-
+# variables defined and used within code
     original = word.lower() or word.upper() or word.lower[1:]
     pig = "yay"
+# For this assignment we will consider y a vowel always
     vowel = ["a","e","i","o","u","y"]
     index = 0
     found_letter = -1
-# y is always a vowel
+# Make sure that all inputs are actual letters and not numbers
     if len(original) > 0 and original.isalpha():
         for i in original:
             if i in vowel:
@@ -44,15 +45,3 @@ def pig_latinify(word):
     return original
 
 pig_latinify("helicopter")
-# input word in between quotation marks
-
-# print (word)
-
-
-    # :param :
-    # :return:
-    # :raises:
-
-    # result = ""
-
-    # return result
