@@ -15,24 +15,31 @@ __license__ = "MIT License"
 
 def union(table1, table2):
 
-    if list in table1[1:] in table2[1:]:
+    list = table1[1:]
+
+    if list in table2[1:]:
         return table1
-    elif:
-        table1.append(table2)
+    elif list not in table2[1:]:
+        return table1.append(table2)
     else:
+        return "Mismatched Attributes"
 
+union([["Number", "Surname", "Age"],
+[7274, "Robinson", 37],
+[7432, "O'Malley", 39],
+[9824, "Darkes", 38]], [["Number", "Surname", "Age"],
+[7274, "Robinson", 37],
+[7432, "O'Malley", 39],
+[9824, "Darkes", 38]])
 
-    return []
+    # Perform the union set operation on tables, table1 and table2.
 
-    """
-    Perform the union set operation on tables, table1 and table2.
+    # :param table1: a table (a List of Lists)
+    # :param table2: a table (a List of Lists)
+    # :return: the resulting table
+    #:raises: MismatchedAttributesException:
+    #if tables t1 and t2 don't have the same attributes
 
-    :param table1: a table (a List of Lists)
-    :param table2: a table (a List of Lists)
-    :return: the resulting table
-    :raises: MismatchedAttributesException:
-        if tables t1 and t2 don't have the same attributes
-    """
 
 def intersection(table1, table2):
     """
