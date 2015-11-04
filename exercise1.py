@@ -14,25 +14,36 @@ __license__ = "MIT License"
 # Describe your function
 
 
-def pig_latinify(piglatin):
-    word = piglatin
+def pig_latinify(word):
+
     original = word.lower() or word.upper() or word.lower[1:]
     pig = "yay"
-    first_letter = original[0]
-    pig_latin_consonant = original[1:len(original)] + first_letter + pig[1:]
-    pig_latin_vowel = original + pig
-
-# y is always a value
+    vowel = ["a","e","i","o","u","y"]
+    index = 0
+    found_letter = -1
+# y is always a vowel
     if len(original) > 0 and original.isalpha():
-        if first_letter in ["a","e","i","o","u","y"]:
-            print(pig_latin_vowel)
+        for i in original:
+            if i in vowel:
+                found_letter = index
+                break
+            index +=1
+
+        if found_letter == -1:
+            no_vowel = original + pig[1:]
+            print no_vowel
+        elif found_letter == 0:
+            first_vowel = original + pig
+            print first_vowel
         else:
-            print(pig_latin_consonant)
+            first_consonant = original[found_letter:] + original[0:found_letter] + pig[1:]
+            print first_consonant
+
     else:
         print("try again")
-    return word
+    return original
 
-pig_latinify("")
+pig_latinify("helicopter")
 # input word in between quotation marks
 
 # print (word)

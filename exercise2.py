@@ -16,20 +16,18 @@ __license__ = "MIT License"
 
 #range function?
 def find(input_string, substring, start, end):
-    # Get the DNA substring
-    print('This program searches for a DNA substring within a DNA string')
-    input_string = raw_input('Please enter a DNA string: ')
-    substring = raw_input('Please enter a DNA substring: ')
+    index = 0
+    string_function = input_string[start:end]
 
-# substring = DNA sequence that we want to locate
-# input_string = complete DNA sequence that is searched.
-# how is the vey lengthy input_string input?
+    for ch in string_function:
+        if ch == substring[0]:
+            if string_function[index: index+len(substring)] == substring:
+                return index
+        index +=1
+    return - 1
 
-    for substring in input_string:
-        start = substring[0]
-        end = (len(substring))
 
-find()
+print(find("This is an ex-parrot", "parrot", 0, 20))
 
 
 """

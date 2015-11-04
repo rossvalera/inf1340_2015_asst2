@@ -14,6 +14,17 @@ __license__ = "MIT License"
 
 
 def union(table1, table2):
+    table1 = [[column1,column2,column3],
+              [c1r1,c2r1,c3r1],
+              [c1r2,c2r2,c3r3],
+              [c1r3,c2r3,c3r3]]
+
+    table2 = [[column1,column2,column3],
+              [c1r1,c2r1,c3r1],
+              [c1r2,c2r2,c3r3],
+              [c1r3,c2r3,c3r3]]
+    return list(table1 | table2)
+
     """
     Perform the union set operation on tables, table1 and table2.
 
