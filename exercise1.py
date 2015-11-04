@@ -41,7 +41,7 @@ def pig_latinify(word):
             return first_consonant
 
     else:
-        print("try again")
-    return original
+        return("try again")
 
-pig_latinify("helicopter")
+
+print(pig_latinify("i45s"))
