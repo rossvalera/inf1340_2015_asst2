@@ -27,6 +27,16 @@ MANAGERS = [["Number", "Surname", "Age"],
             [7432, "O'Malley", 39],
             [9824, "Darkes", 38]]
 
+ADMIN = [["Number", "Surname", "Age"],
+            [9297, "Rodriguez", 56],
+            [7432, "O'Mealy", 39],
+            [9824, "Darkes", 38]]
+
+VENDORS = [["Numero", "Nombre", "Edad"],
+            [9297, "Rodri uez", 56],
+            [7432, "O'M", 39],
+            [9824, "Darkes", 38]]
+
 
 #####################
 # HELPER FUNCTIONS ##
@@ -51,6 +61,11 @@ def test_union():
 
     assert is_equal(result, union(GRADUATES, MANAGERS))
 
+result = [["Number", "Surname", "Age"],
+              [7274, "Robinson", 37],
+              [9297, "O'Malley", 56],
+              [7432, "O'Malley", 39],
+              [9824, "Darkes", 38]]
 
 def test_intersection():
     """
