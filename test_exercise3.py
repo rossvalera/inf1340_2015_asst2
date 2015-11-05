@@ -106,3 +106,4 @@ def test_difference():
              [7432, "O'Malley", 39]]
 
     assert is_equal(result, difference(GRADUATES, ADMIN))
+

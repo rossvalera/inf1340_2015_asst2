@@ -16,6 +16,8 @@ __license__ = "MIT License"
 
 def table_check(table1, table2):
 
+    # Function to check whether attributes in tables are the same
+    # If not return exception
     if table1[0] == table2[0]:
         return "true"
     else:
@@ -23,18 +25,24 @@ def table_check(table1, table2):
 
 
 def union(table1, table2):
+    # Function to add all unique rows of both tables into one table
 
+    # Checks to make sure attributes are the same
     table_check(table1, table2)
 
+    # Adding tables together and removing duplicates, returns new table
     union_list = table1 + table2
     return remove_duplicates(union_list)
 
 
 def intersection(table1, table2):
+    # Function to add all unique rows that are in each table to a new table
+
 
     table_check(table1, table2)
     int_list = []
 
+    # Checks for unique rows in both tables and return only the unique rows that are in both tables
     for schema in table1:
         for schema1 in table2:
             if schema == schema1:
@@ -45,10 +53,12 @@ def intersection(table1, table2):
 
 
 def difference(table1, table2):
+    # Function that looks for unique rows in table 1 that are not in table 2 and returns them in a new table
 
     table_check(table1, table2)
     diff_list = []
 
+    # Checks what rows are in table 1 that arent in table 2 and makes a new table with them
     if table_check(table1, table2):
         diff_list = [table1[0]]
         for schema in table1:
