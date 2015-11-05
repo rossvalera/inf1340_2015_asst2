@@ -15,23 +15,12 @@ __license__ = "MIT License"
 """"""""
 def union(table1, table2):
 
-    #this function calls schema row of table:
-    table = [["Number", "Surname", "Age"],
-    [7274, "Robinson", 37],
-    [7432, "O'Malley", 39],
-    [9824, "Darkes", 38]]
-
-    list = table[0]
-    list
-
-
-    if list in table2[1:]:
+    if list in table2[0]:
         return table1
-    elif list not in table2[1:]:
+    elif list not in table2[0]:
         return table1.append(table2)
     else:
         return "Mismatched Attributes"
-
 
 union([["Number", "Surname", "Age"],
 [7274, "Robinson", 37],
