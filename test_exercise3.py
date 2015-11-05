@@ -38,6 +38,8 @@ VENDORS = [["Numero", "Nombre", "Edad"],
             [9824, "Darkes", 38]]
 
 
+
+
 #####################
 # HELPER FUNCTIONS ##
 #####################
@@ -61,11 +63,18 @@ def test_union():
 
     assert is_equal(result, union(GRADUATES, MANAGERS))
 
-result = [["Number", "Surname", "Age"],
+    result1 = [["Number", "Surname", "Age"],
               [7274, "Robinson", 37],
-              [9297, "O'Malley", 56],
               [7432, "O'Malley", 39],
-              [9824, "Darkes", 38]]
+              [9824, "Darkes", 38],
+              [9297, "Rodriguez", 56],
+              [7432, "O'Mealy", 39]]
+
+
+    assert is_equal(result1, union(GRADUATES, ADMIN))
+
+
+
 
 def test_intersection():
     """
@@ -77,6 +86,10 @@ def test_intersection():
 
     assert is_equal(result, intersection(GRADUATES, MANAGERS))
 
+    result1 = [["Number", "Surname", "Age"],
+              [9824, "Darkes", 38]]
+
+    assert is_equal(result1, intersection(GRADUATES, ADMIN))
 
 def test_difference():
     """
