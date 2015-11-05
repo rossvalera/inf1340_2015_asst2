@@ -24,54 +24,41 @@ def table_check(table1, table2):
 
 def union(table1, table2):
 
-    if ((len(table1[0]) == len(table2[0])) and
-       (all(i in table1[0] for i in table2[0]))):
-        print table1
-    elif table2[0] not in table1[0]:
-        print table2.append(table1)
-    else:
-        print "Mismatched Attributes"
+    table_check(table1, table2)
 
-#return, v. print?
-
-table1 = [["Number", "Surname", "Age"], [7274, "Robinson", 37], [7432, "O'Malley", 39], [9824, "Darkes", 38]]
-table2 = [["Number", "Surname", "Age"], [7274, "Robinson", 37], [7432, "O'Malley", 39], [9824, "Darkes", 38]]
-
-union(table1, table2)
-
-#commented out previous code, in case we need to come back to it:
-    #if list in table2[0]:
-        #return table1
-    #elif list not in table2[0]:
-        #return table1.append(table2)
-    #else:
-        #return "Mismatched Attributes"
-
-
-    # Perform the union set operation on tables, table1 and table2.
-
-    # :param table1: a table (a List of Lists)
-    # :param table2: a table (a List of Lists)
-    # :return: the resulting table
-    #:raises: MismatchedAttributesException:
-    #if tables t1 and t2 don't have the same attributes
+    union_list = table1 + table2
+    return remove_duplicates(union_list)
 
 
 def intersection(table1, table2):
-    """
-    Describe your function
 
-    """
+    table_check(table1, table2)
+    int_list = []
 
-    return []
+    for schema in table1:
+        for schema1 in table2:
+            if schema == schema1:
+                int_list.append(schema)
+    return int_list
+
+
 
 
 def difference(table1, table2):
-    """
-    Describe your function
 
-    """
-    return []
+    table_check(table1, table2)
+    diff_list = []
+
+    if table_check(table1, table2):
+        diff_list = [table1[0]]
+        for schema in table1:
+            if schema not in table2:
+                diff_list.append(schema)
+        return diff_list
+
+
+
+
 
 
 #####################
