@@ -100,3 +100,9 @@ def test_difference():
               [7274, "Robinson", 37]]
 
     assert is_equal(result, difference(GRADUATES, MANAGERS))
+
+    result = [["Number", "Surname", "Age"],
+             [7274, "Robinson", 37],
+             [7432, "O'Malley", 39]]
+
+    assert is_equal(result, difference(GRADUATES, ADMIN))
