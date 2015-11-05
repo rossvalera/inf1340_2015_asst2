@@ -19,9 +19,11 @@ def union(table1, table2):
        (all(i in table1[0] for i in table2[0]))):
         print table1
     elif table2[0] not in table1[0]:
-        print "Mismatched Attributes"
-    else:
         print table2.append(table1)
+    else:
+        print "Mismatched Attributes"
+
+#return, v. print?
 
 table1 = [["Number", "Surname", "Age"], [7274, "Robinson", 37], [7432, "O'Malley", 39], [9824, "Darkes", 38]]
 table2 = [["Number", "Surname", "Age"], [7274, "Robinson", 37], [7432, "O'Malley", 39], [9824, "Darkes", 38]]
