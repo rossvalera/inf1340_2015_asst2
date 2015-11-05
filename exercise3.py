@@ -13,6 +13,15 @@ __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
 """"""""
+
+def table_check(table1, table2):
+
+    if table1[0] == table2[0]:
+        return "true"
+    else:
+        raise MismatchedAttributesException
+
+
 def union(table1, table2):
 
     if ((len(table1[0]) == len(table2[0])) and
