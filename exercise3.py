@@ -15,20 +15,26 @@ __license__ = "MIT License"
 """"""""
 def union(table1, table2):
 
-    if list in table2[0]:
-        return table1
-    elif list not in table2[0]:
-        return table1.append(table2)
+    if ((len(table1[0]) == len(table2[0])) and
+       (all(i in table1[0] for i in table2[0]))):
+        print table1
+    elif table2[0] not in table1[0]:
+        print "Mismatched Attributes"
     else:
-        return "Mismatched Attributes"
+        print table2.append(table1)
 
-union([["Number", "Surname", "Age"],
-[7274, "Robinson", 37],
-[7432, "O'Malley", 39],
-[9824, "Darkes", 38]], [["Number", "Surname", "Age"],
-[7274, "Robinson", 37],
-[7432, "O'Malley", 39],
-[9824, "Darkes", 38]])
+table1 = [["Number", "Surname", "Age"], [7274, "Robinson", 37], [7432, "O'Malley", 39], [9824, "Darkes", 38]]
+table2 = [["Number", "Surname", "Age"], [7274, "Robinson", 37], [7432, "O'Malley", 39], [9824, "Darkes", 38]]
+
+union(table1, table2)
+
+#commented out previous code, in case we need to come back to it:
+    #if list in table2[0]:
+        #return table1
+    #elif list not in table2[0]:
+        #return table1.append(table2)
+    #else:
+        #return "Mismatched Attributes"
 
 
     # Perform the union set operation on tables, table1 and table2.
