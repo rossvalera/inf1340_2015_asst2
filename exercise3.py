@@ -12,10 +12,18 @@ __email__ = "ses@drsusansim.org"
 __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
-
+""""""""
 def union(table1, table2):
 
-    list = table1[1:]
+    #this function calls schema row of table:
+    table = [["Number", "Surname", "Age"],
+    [7274, "Robinson", 37],
+    [7432, "O'Malley", 39],
+    [9824, "Darkes", 38]]
+
+    list = table[0]
+    list
+
 
     if list in table2[1:]:
         return table1
@@ -24,6 +32,7 @@ def union(table1, table2):
     else:
         return "Mismatched Attributes"
 
+
 union([["Number", "Surname", "Age"],
 [7274, "Robinson", 37],
 [7432, "O'Malley", 39],
@@ -31,6 +40,7 @@ union([["Number", "Surname", "Age"],
 [7274, "Robinson", 37],
 [7432, "O'Malley", 39],
 [9824, "Darkes", 38]])
+
 
     # Perform the union set operation on tables, table1 and table2.
 
