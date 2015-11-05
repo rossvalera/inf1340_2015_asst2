@@ -23,8 +23,10 @@ def test_basic():
     assert pig_latinify("scratch") == "atchscray"
     assert pig_latinify("is") == "isyay"
     assert pig_latinify("apple") == "appleyay"
+
+    # Test cases o check various correct and incorrect inputs added
     assert pig_latinify("h4h4h") == "try again"
     assert pig_latinify("13131231") == "try again"
     assert pig_latinify("street") == "eetstray"
     assert pig_latinify("YELLOW") == "ellowyay"
-
+    assert pig_latinify("") == "try again"
