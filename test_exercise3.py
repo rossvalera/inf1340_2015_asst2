@@ -27,18 +27,16 @@ MANAGERS = [["Number", "Surname", "Age"],
             [7432, "O'Malley", 39],
             [9824, "Darkes", 38]]
 
-# Added extra tables, one that is correct another that isnt
+# Added extra tables, one that is correct another that isn't
 ADMIN = [["Number", "Surname", "Age"],
-            [9297, "Rodriguez", 56],
-            [7432, "O'Mealy", 39],
-            [9824, "Darkes", 38]]
+         [9297, "Rodriguez", 56],
+         [7432, "O'Mealy", 39],
+         [9824, "Darkes", 38]]
 
 VENDORS = [["Numero", "Nombre", "Edad"],
-            [9297, "Rodri uez", 56],
-            [7432, "O'M", 39],
-            [9824, "Darkes", 38]]
-
-
+           [9297, "Rodri uez", 56],
+           [7432, "O'M", 39],
+           [9824, "Darkes", 38]]
 
 
 #####################
@@ -66,12 +64,11 @@ def test_union():
 
     # Tested with another table for correct results
     result1 = [["Number", "Surname", "Age"],
-              [7274, "Robinson", 37],
-              [7432, "O'Malley", 39],
-              [9824, "Darkes", 38],
-              [9297, "Rodriguez", 56],
-              [7432, "O'Mealy", 39]]
-
+               [7274, "Robinson", 37],
+               [7432, "O'Malley", 39],
+               [9824, "Darkes", 38],
+               [9297, "Rodriguez", 56],
+               [7432, "O'Mealy", 39]]
 
     assert is_equal(result1, union(GRADUATES, ADMIN))
 
@@ -82,9 +79,6 @@ def test_union():
         assert True
     else:
         assert MismatchedAttributesException
-
-
-
 
 
 def test_intersection():
@@ -99,7 +93,7 @@ def test_intersection():
 
     # Checked intersection with another table, results given in table below
     result1 = [["Number", "Surname", "Age"],
-              [9824, "Darkes", 38]]
+               [9824, "Darkes", 38]]
 
     assert is_equal(result1, intersection(GRADUATES, ADMIN))
 
@@ -110,6 +104,7 @@ def test_intersection():
         assert True
     else:
         assert MismatchedAttributesException
+
 
 def test_difference():
     """
@@ -123,8 +118,8 @@ def test_difference():
 
     # Checked difference with another table, results given in table below
     result = [["Number", "Surname", "Age"],
-             [7274, "Robinson", 37],
-             [7432, "O'Malley", 39]]
+              [7274, "Robinson", 37],
+              [7432, "O'Malley", 39]]
 
     assert is_equal(result, difference(GRADUATES, ADMIN))
 
@@ -135,6 +130,7 @@ def test_difference():
         assert True
     else:
         assert MismatchedAttributesException
+
 
 def test_table_check():
     """

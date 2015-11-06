@@ -11,12 +11,17 @@ __email__ = "ses@drsusansim.org"
 __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
-# This function will change any word given to it to pig latin
-
 
 def pig_latinify(word):
+    """
+    This function will translate any English word to Pig latin
+    :param word: Any word using the alphabet
+    :return: The word will get translated to Pig Latin
+            If the first letter is a vowel will add "yay" to the end
+            If the first letter is a consonant will take all consonants up until teh worst vowel and add them to the end
+            with "ay" added
+    """
     # variables defined and used within code
-
     original = word.lower()
     pig = "yay"
     # For this assignment we will consider y a vowel always
@@ -51,7 +56,7 @@ def pig_latinify(word):
     # Any word that doesnt only use alphabetical characters will return "try again"
     # No input will also return "try again"
     else:
-        return("try again")
+        return "try again"
 
 # Function Commented out
-#print(pig_latinify(""))
+# print(pig_latinify(""))

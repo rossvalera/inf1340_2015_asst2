@@ -31,3 +31,4 @@ def test_basic():
     assert pig_latinify("YELLOW") == "ellowyay"
     assert pig_latinify("") == "try again"
     assert pig_latinify("$%^&*") == "try again"
+    assert pig_latinify("WhY") == "whyay"
