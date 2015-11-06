@@ -37,7 +37,7 @@ def multi_find(input_string, substring, start, end):
     # Set variables that will be used
     new_string = ""
     new_index = 0
-    index = find(input_string,substring,start,end)
+    index = find(input_string, substring, start, end)
 
     # Check if word is actually in the phrase if not gives back -1
     if index == -1:

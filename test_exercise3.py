@@ -107,3 +107,12 @@ def test_difference():
 
     assert is_equal(result, difference(GRADUATES, ADMIN))
 
+def test_mismatchedattributesexception():
+    """
+    Test mismatched attributes exception.
+    """
+    try:
+        raise Mismatchedattributesexception
+    except Mismatchedattributesexception as :
+        pass
+
