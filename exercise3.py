@@ -7,7 +7,7 @@ implemented as lists of lists.
 
 """
 
-__author__ = 'Susan Sim'
+__author__ = 'Sinisa Savic', 'Marcos Armstrong', 'Susan Sim'
 __email__ = "ses@drsusansim.org"
 __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
@@ -19,7 +19,7 @@ def table_check(table1, table2):
     # Function to check whether attributes in tables are the same
     # If not return exception
     if table1[0] == table2[0]:
-        return "true"
+        return True
     else:
         raise MismatchedAttributesException
 

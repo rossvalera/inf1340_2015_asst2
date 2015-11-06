@@ -6,7 +6,7 @@ This module converts performs substring matching for DNA sequencing
 
 """
 
-__author__ = 'Susan Sim'
+__author__ = 'Sinisa Savic', 'Marcos Armstrong', 'Susan Sim'
 __email__ = "ses@drsusansim.org"
 __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
@@ -28,8 +28,8 @@ def find(input_string, substring, start, end):
     # Given word is not in the range of the given phrase, error is given
     return - 1
 
-
-print(find("This is an ex-parrot", "parrot", 0, 20))
+# Function Commented out
+#print(find("This is an ex-parrot", "parrot", 0, 20))
 
 
 # Will return all instances of given word within phrase
@@ -58,4 +58,5 @@ def multi_find(input_string, substring, start, end):
                 new_string += ', ' + str(new_index)
         return new_string[2:]
 
-print(multi_find("Ni! Ni! Ni! Ni!", "Ni", 0, 20))
+# Function Commented out
+#print(multi_find("Ni! Ni! Ni! Ni!", "Ni", 0, 20))

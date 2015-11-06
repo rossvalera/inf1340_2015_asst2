@@ -6,7 +6,7 @@ This module converts English words to Pig Latin words
 
 """
 
-__author__ = 'Susan Sim'
+__author__ = 'Sinisa Savic', 'Marcos Armstrong', 'Susan Sim'
 __email__ = "ses@drsusansim.org"
 __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
@@ -53,5 +53,5 @@ def pig_latinify(word):
     else:
         return("try again")
 
-
-print(pig_latinify(""))
+# Function Commented out
+#print(pig_latinify(""))
